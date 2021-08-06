@@ -36,3 +36,21 @@ function greetPeople(greeting, names) {
 }
 var array = ["Maria", "Perla", "Yolanda", "Blanca", "Siquiel"];
 console.log(greetPeople("Hello", array));
+// Overloading need to write function declaration for each of the overloding
+//function hello1(names:string):string {}
+//function hello1(names:string[]):string {}
+function hello(names, greeting) {
+    var namesArray;
+    if (Array.isArray(names)) {
+        namesArray = names;
+    }
+    else {
+        namesArray = [names];
+    }
+    if (!greeting) {
+        greeting = "Hello";
+    }
+    return greeting + ", " + namesArray.join(' and ') + '!';
+}
+console.log("Printing Function overloading");
+console.log(hello("Pedrito Fernandes", "Good Bye"));

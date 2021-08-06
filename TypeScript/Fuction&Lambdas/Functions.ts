@@ -41,4 +41,24 @@ function greetPeople(greeting: string,names:string[]): string {
 let array:string[]=["Maria","Perla","Yolanda","Blanca","Siquiel"]
 
 console.log(greetPeople("Hello",array));
+// Overloading need to write function declaration for each of the overloding
+//function hello1(names:string):string {}
+//function hello1(names:string[]):string {}
+
+// Takes an arry of string or sigle string. Also take greeting or not
+function hello(names:any,greeting?:string) { 
+    let namesArray: string[];
+    if(Array.isArray(names)){
+        namesArray=names;
+    }else{
+        namesArray =[names];
+    }
+    if(!greeting){
+        greeting="Hello"
+    }
+    return greeting+", "+ namesArray.join(' and ')+ '!';
+}
+
+console.log("Printing Function overloading");
+console.log(hello("Pedrito Fernandes","Good Bye"))
 
