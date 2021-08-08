@@ -8,6 +8,14 @@ console.log(method<number>(1));
 
 function method2<T>(arg:T[]):T[] {
     console.log(arg.length);
-    return arg;
-    
+    return arg; 
 }
+
+class CustomPerson extends Array{}
+class Person {}
+
+const people: Person[] =[];
+//const newPerson= new CustomPerson();
+method2<Person>(people);
+//method2<CustomPerson>(newPerson);
+
