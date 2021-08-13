@@ -1,0 +1,2 @@
+link for book exersices: https://github.com/H3AR7B3A7/EarlyAngularProjects
+link for typeScript from javabrains site: https://www.youtube.com/c/JavaBrainsChannel/videos
