@@ -1,1 +1,12 @@
 <app-hero [name]="hero" (liked)="onLike()" ></app-hero>
+
+<h3>PIPES EXAMPLES</h3>
+
+<p>{{'Hello Angular 10' | uppercase}}</p>
+<p>{{'HELLO ANGULAR 10' | lowercase}}</p>
+<p>{{100 |currency}}</p>
+<p>{{100 |currency:'EUR'}}</p>
+<p>{{ heroes| slice:1:9}}</p>
+<p>{{today | date}}</p>
+<p>{{today | date:'fullDate'}}</p>
+<p>{{hero2 | json}}</p>
